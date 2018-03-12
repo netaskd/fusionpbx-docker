@@ -8,11 +8,11 @@ Usage
 
 First pull the image using the command:
 ```
-docker pull digitaldaz/fusionpbx-docker
+docker pull netaskd/fusionpbx-docker
 ```
 Once the image has downloaded:
 ```
-docker run --net=host --privileged --name container-name-here -d digitaldaz/fusionpbx-docker
+docker run --net=host --privileged --name container-name-here -d netaskd/fusionpbx-docker
 ```
 The placeholder container-name-here can be set to anything you like. This will start the container running, we now need to set the 
 database password, to do this we need to find the container id and so we run:
@@ -22,7 +22,7 @@ docker ps
 This will produce output similar to:
 ```
 CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS
-017c1a7397e1        digitaldaz/fusionpbx-docker   "/bin/sh -c '/usr/bin"   10 seconds ago      Up 7 seconds
+017c1a7397e1        netaskd/fusionpbx-docker   "/bin/sh -c '/usr/bin"   10 seconds ago      Up 7 seconds
 ```
 Replacing the Container ID with our own, and substituting mypassword with an appropriate one we do:
 ```
