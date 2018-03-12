@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:jessie
 # Install Required Dependencies
 RUN apt-get update \
 	&& apt-get upgrade -y \
