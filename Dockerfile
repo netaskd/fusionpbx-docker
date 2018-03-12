@@ -16,7 +16,7 @@ RUN apt-get update \
 		nginx \
 		php5 php5-cli php5-fpm php5-pgsql php5-sqlite php5-odbc php5-curl php5-imap php5-mcrypt wget curl openssh-server supervisor net-tools\
 	&& apt-get clean \
-	&& git clone https://github.com/fusionpbx/fusionpbx.git /var/www/fusionpbx 
+	&& git clone -b '4.2.2' --single-branch https://github.com/fusionpbx/fusionpbx.git /var/www/fusionpbx
 
 RUN chown -R www-data:www-data /var/www/fusionpbx
 RUN wget https://raw.githubusercontent.com/fusionpbx/fusionpbx-install.sh/master/debian/resources/nginx/fusionpbx -O /etc/nginx/sites-available/fusionpbx && ln -s /etc/nginx/sites-available/fusionpbx /etc/nginx/sites-enabled/fusionpbx \
